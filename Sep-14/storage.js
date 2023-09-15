@@ -1,0 +1,11 @@
+localStorage.setItem("no",39739263)
+var name=localStorage.getItem("no")
+console.log(name)
+console.log(typeof(name))
+var list=["a","b","c"]
+var slist=JSON.stringify(list)
+localStorage.setItem("NameList",slist)
+var n=localStorage.getItem("NameList")
+var list_1=localStorage.getItem("NameList")
+var clist=JSON.parse(list_1)
+console.log(clist[1])
