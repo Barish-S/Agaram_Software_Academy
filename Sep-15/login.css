@@ -1,0 +1,17 @@
+#top{
+    display: none;
+}
+body{
+text-align: center;}
+#regis{
+    display: none;
+}
+.reg{
+    text-align: center;
+}
+#table{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+

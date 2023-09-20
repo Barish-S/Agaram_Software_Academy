@@ -31,4 +31,3 @@ function remove(todo){
     todos.splice(index,1)
     localStorage.setItem('todos',JSON.stringify(todos))
 }
-

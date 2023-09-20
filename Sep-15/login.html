@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="top">
+    <h1 style="display: inline-block;" id="intro">Welcome To !</h1><br>
+    <input type="button" value="Logout" onclick="logout()">
+    <div id="table">
+        <table border="1" cellpadding="20" cellsapacing="0" width="70%">
+            <tr id="row1">
+                <th>Name</th>
+                <th>E-Mail</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td id="name1">a</td>
+                <td >b</td>
+                <td><img src="/home/barish/Downloads/pencil.png" alt="icon" style="height: 20px; width: 20px;"></td>
+                <td><img src="/home/barish/Downloads/trash.png" alt="icon" style="height: 20px; width: 20px;"></td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td><img src="/home/barish/Downloads/pencil.png" alt="icon" style="height: 20px; width: 20px;"></td>
+                <td><img src="/home/barish/Downloads/trash.png" alt="icon" style="height: 20px; width: 20px;"></td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td><img src="/home/barish/Downloads/pencil.png" alt="icon" style="height: 20px; width: 20px;"></td>
+                <td><img src="/home/barish/Downloads/trash.png" alt="icon" style="height: 20px; width: 20px;"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div id="login">
+        <h1>Login Page</h1>
+        <form action="">
+        <label>Email : </label>
+        <input type="email" placeholder="E-Mail ID" id="email"><br><br>
+        <label>Password : </label>
+        <input type="password" placeholder="Password" id="password"><br><br>
+        <input type="button" value="Login" onclick="loginCheck()">
+        <input type="button" value="Registeration" onclick="reg()">
+        </form>
+    </div>
+    <div id="regis">
+        <form>
+        <h1>Registeration</h1>
+        <label>Name : </label>
+        <input type="text" placeholder="Username" id="r_user"><br><br>
+        <label>E-Mail</label>
+        <input type="email" placeholder="Enter Your Mail ID" id="r_mail"><br><br>
+        <label>Password : </label>
+        <input type="password" placeholder="Enter Your Password" id="r_password"><br><br>
+        <input type="button" value="Register" onclick="register()" >
+        </form>
+    </div>   
+<script src="login.js" text="text/javascript"></script>
+<script>loging()</script>
+</body>
+</html>
