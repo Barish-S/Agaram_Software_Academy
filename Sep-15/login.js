@@ -1,25 +1,3 @@
-// let userDetails=[
-//     {
-//     email:"barish@gmail.com",
-//     password:"123456",
-//     name:"Barish"
-// },
-// {
-//     email:"saheen@gmail.com",
-//     password:"987654",
-//     name:"Saheen"
-// },
-// {
-//     email:"ashif@gmail.com",
-//     password:"987654",
-//     name:"Ashif"
-// }
-// ]
-
-// localStorage.setItem("user",JSON.stringify(userDetails))
-// function loger(){
-//     alert("Success")
-// }
 function loginCheck(){
     let login_email=document.getElementById("email").value;
     let login_password=document.getElementById("password").value;
@@ -51,6 +29,7 @@ function loging(){
         document.getElementById("login").style.display="none"
         document.getElementById("top").style.display="block"
     }
+    option()
 }
 
 function reg(){
@@ -79,6 +58,57 @@ document.getElementById("regis").style.display="none"
 document.getElementById("login").style.display="block"
 
 }
-function update(){
+function lpage(){
+    document.getElementById("regis").style.display="none"
+    document.getElementById("login").style.display="block"
+}
+function option(){
+    let nlist=JSON.parse(localStorage.getItem("user"))
+    let hname=""
+    for(var i=0;i<nlist.length;i++){
+        name_l=nlist[i].name
+        mail_l=nlist[i].email
+        hname=hname+`<tr>
+                        <td>${name_l}</td>
+                        <td>${mail_l}</td>
+                        <td><button id="edit" onclick="edit('${mail_l}')">Edit</button></td>
+                        <td><button id="del" onclick="del('${mail_l}')">Delete</button></td>
+                    </tr>`
+        document.getElementById("table").style.display="block"
+}
+document.getElementById("list_table").innerHTML=hname;
+}
+
+function edit(a){
+    document.getElementById("top").style.display="none"
+    document.getElementById("editing").style.display="block"
     
 }
+
+function update(){
+    let e_user=JSON.parse(localStorage.getItem("user"))
+    var e_use=document.getElementById("e_usern").value
+    var e_usen=document.getElementById("ei_mail").value
+    var e_pass=document.getElementById("e_password").value
+    for(var i=0;i<e_user.length;i++){
+        if(e_user[i].email==a){
+            e_user[i].name=e_use
+            e_user[i].email=e_usen
+            e_user[i].password=e_pass
+        }
+    }
+    localStorage.setItem("user",JSON.stringify(e_user))
+}
+
+function del(a){
+  let datas=JSON.parse(localStorage.getItem("user"))
+  let newData=[]
+  for(var i=0;i<datas.length;i++ ){
+    if(datas[i].email!=a){
+        newData.push(datas[i])
+    }
+  }
+  localStorage.setItem("user",JSON.stringify(newData))
+  option()
+}
+

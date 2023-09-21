@@ -13,5 +13,9 @@ text-align: center;}
     text-align: center;
     margin-left: 25%;
     margin-top: 5%;
+    /* display: none; */
+}
+#editing{
+    display: none;
 }
 
