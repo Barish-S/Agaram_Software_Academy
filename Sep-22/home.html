@@ -4,20 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="login">
-        <h1>Login Page</h1>
-        <form action="">
-        <label>Email : </label>
-        <input type="email" placeholder="E-Mail ID" id="email"><br><br>
-        <label>Password : </label>
-        <input type="password" placeholder="Password" id="password"><br><br>
-        <input type="button" value="Login" onclick="loginCheck()">
-        <input type="button" value="Registeration" onclick="reg()">
-        </form>
-    </div>
     <div id="top">
         <h1 style="display: inline-block;" id="intro">Welcome To !</h1><br>
         <input type="button" value="Logout" onclick="logout()">
@@ -38,19 +27,6 @@
             </table>
         </div>
     </div>
-    <div id="regis">
-        <form>
-        <h1>Registeration</h1>
-        <label>Name : </label>
-        <input type="text" placeholder="Username" id="r_user" required><br><br>
-        <label>E-Mail</label>
-        <input type="email" placeholder="Enter Your Mail ID" id="r_mail" required><br><br>
-        <label>Password : </label>
-        <input type="password" placeholder="Enter Your Password" id="r_password" required><br><br>
-        <input type="button" value="Register" onclick="register()" >
-        <input type="button" value="For Login Page" onclick="lpage()"> 
-        </form>
-    </div>
     <div id="editing">
         <form>
         <h1>UPDATE YOUR DETAILS</h1>
@@ -62,8 +38,9 @@
         <input type="password" placeholder="New Password" id="e_password" required><br><br>
         <input type="button" value="Update" onclick="update()">
         </form>
-    </div>   
-<script src="login.js" text="text/javascript"></script>
-<script>loging()</script>
+    </div>  
 </body>
+<script src="script.js"></script>
+<script>loging()</script>
+<script>redirect()</script>
 </html>

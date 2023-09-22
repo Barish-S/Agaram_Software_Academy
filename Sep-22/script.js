@@ -10,8 +10,7 @@ function loginCheck(){
         if (e==login_email&&p==login_password){
             localStorage.setItem("loggedIn",true)
             localStorage.setItem("LoggedUsername",n)
-            document.getElementById("login").style.display="none"
-            document.getElementById("top").style.display="block"
+            window.location="home.html";
             document.getElementById("intro").innerHTML=`Welcome ${n}!`
         // alert("Success")
         }
@@ -22,21 +21,18 @@ function loging(){
         if(localStorage.getItem("loggedIn")){
         u=localStorage.getItem("LoggedUsername")
         document.getElementById("intro").innerHTML=`Welcome ${u}!`
-        document.getElementById("login").style.display="none"
-        document.getElementById("top").style.display="block"
+        // window.location="home.html"
     }
     option()
 }
 
 function logout(){
     localStorage.removeItem("loggedIn")
-    document.getElementById("login").style.display="block"
-    document.getElementById("top").style.display="none"
+    window.location="login.html"
 }
 
 function reg(){
-    document.getElementById("regis").style.display="block"
-    document.getElementById("login").style.display="none"
+    window.location="register.html"
     
 }
 function register(){
@@ -56,13 +52,11 @@ function register(){
                     )
     localStorage.setItem("user",JSON.stringify(parseData))
     alert("Registered Successfully")
-    document.getElementById("regis").style.display="none"
-    document.getElementById("login").style.display="block"
+    window.location="login.html"
 }
 
 function lpage(){
-    document.getElementById("regis").style.display="none"
-    document.getElementById("login").style.display="block"
+    window.location="login.html"
 }
 
 function option(){
@@ -77,7 +71,6 @@ function option(){
                         <td><button id="edit" onclick="edit()">Edit</button></td>
                         <td><button id="del" onclick="del('${mail_l}')">Delete</button></td>
                     </tr>`
-        document.getElementById("table").style.display="block"
 }
 document.getElementById("list_table").innerHTML=hname;
 }
@@ -119,4 +112,11 @@ function del(a){
   localStorage.setItem("user",JSON.stringify(newData))
   option()
 }
+
+function redirect(){
+    if(!localStorage.getItem("loggedIn")){
+        window.location.href="login.html"
+    }
+}
+
 
