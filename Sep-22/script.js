@@ -14,9 +14,6 @@ function loginCheck(){
             document.getElementById("intro").innerHTML=`Welcome ${n}!`
         // alert("Success")
         }
-        else{
-            alert("Incorrect E-Mail or Password")
-        }
     }
 }
 
