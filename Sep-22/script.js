@@ -66,40 +66,69 @@ function option(){
         name_l=nlist[i].name
         mail_l=nlist[i].email
         hname=hname+`<tr>
-                        <td>${name_l}</td>
-                        <td>${mail_l}</td>
-                        <td><button id="edit" onclick="edit()">Edit</button></td>
+                        <td id="upname+'${i}'">${name_l}</td>
+                        <td id="upmail+'${i}'">${mail_l}</td>
+                        <td><button id="edit" onclick="edit('${mail_l}')">Edit</button></td>
                         <td><button id="del" onclick="del('${mail_l}')">Delete</button></td>
                     </tr>`
 }
 document.getElementById("list_table").innerHTML=hname;
 }
 
-function edit(){
-    document.getElementById("top").style.display="none"
-    document.getElementById("editing").style.display="block"
-
-}
-
-function update(){
-    get=window.mail_l
-    let e_user=JSON.parse(localStorage.getItem("user"))
-    var e_use=document.getElementById("e_usern").value
-    var e_usen=document.getElementById("ei_mail").value
-    var e_pass=document.getElementById("e_password").value
-    for(var i=0;i<e_user.length;i++){
-        if(e_user[i].email==get){
-            e_user[i].name=e_use
-            e_user[i].email=e_usen
-            e_user[i].password=e_pass
-        }
+function edit(e){
+    let e_detail=JSON.parse(localStorage.getItem("user"))
+    for(var i=0;i<e_detail.length;i++){
+        if(e_detail[i].email==e){
+            let e_use=prompt("New Username",`${e_detail[i].name}`)
+            let e_usen=prompt("New Mail",`${e_detail[i].email}`)
+            if(e_use!=e_detail[i].name){
+                document.getElementById(`upname+'${i}'`).innerHTML=e_use
+            }
+            if(e_usen!=e_detail[i].email){
+                document.getElementById(`upname+'${i}'`).innerHTML=e_usen
+            }
+                e_detail[i]=({
+                    email:e_usen,
+                    name:e_use,
+                    password:e_detail[i].password
+                })
+            }
     }
-    localStorage.setItem("user",JSON.stringify(e_user))
-    alert("Details Updated Successfully")
-    document.getElementById("top").style.display="block"
-    document.getElementById("editing").style.display="none"
+    localStorage.setItem("user",JSON.stringify(e_detail))
     loging()
 }
+
+// function update(){
+//     get=window.mail_l
+//     let e_user=JSON.parse(localStorage.getItem("user"))
+//     var e_use=document.getElementById("e_usern").value
+//     var e_usen=document.getElementById("ei_mail").value
+//     // var e_pass=document.getElementById("e_password").value
+//     for(var i=0;i<e_user.length;i++){
+//         if(e_user==get){
+//             if(e_use!=e_user[i].name){
+//                 document.getElementById(`upname+'${i}'`).innerHTML=e_use
+//             }
+//             if(e_usen!=e_user[i].email){
+//                 document.getElementById(`upname+'${i}'`).innerHTML=e_usen
+//             }
+//                 // e_user[i].name=e_use
+//                 // e_user[i].email=e_usen
+//                 // e_user[i].password=e_pass
+//                 e_user[i]=({
+//                     email:e_usen,
+//                     name:e_use,
+//                     password:e_user[i].password
+//                 })
+//             }
+        
+//     }
+//     localStorage.setItem("user",JSON.stringify(e_user))
+//     alert("Details Updated Successfully")
+//     document.getElementById("top").style.display="block"
+//     document.getElementById("editing").style.display="none"
+//     loging()
+// }
 
 function del(a){
   let datas=JSON.parse(localStorage.getItem("user"))
