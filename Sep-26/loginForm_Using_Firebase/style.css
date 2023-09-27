@@ -1,0 +1,15 @@
+
+body{
+text-align: center;}
+.reg{
+    text-align: center;
+}
+#table{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+#editing{
+    display: none;
+}
+
