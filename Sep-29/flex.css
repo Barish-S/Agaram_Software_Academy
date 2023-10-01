@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    
+}
+p{
+    border: 1px solid black;
+    width: 20%;
+    height: 120px;
+    background-color: rgb(153, 147, 147);
+    text-align: center;
+    
+    
+}

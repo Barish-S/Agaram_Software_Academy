@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+</head>
+<body>
+    <h1>UPDATE YOUR DETAILS</h1>
+    <label>Update_Name : </label>
+        <input type="text" placeholder="New Username" id="a_name" required><br><br>
+        <label>Update_E-Mail : </label>
+        <input type="email" placeholder="New Mail ID" id="a_mail" required><br><br>
+        <label>Update_Password : </label>
+        <input type="password" placeholder="New Password" id="a_password" required><br><br>
+        <input type="button" value="Update" onclick="updateUserData()">
+</body>
+<script src="script.js"></script>
+</html>

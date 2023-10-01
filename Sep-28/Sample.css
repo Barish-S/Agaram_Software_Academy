@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: brown;
+    position: relative;
+}
+div{
+    width: 500px;
+    height: 500px;
+    background-color: grey;
+    border: 1px solid white;
+    margin: 10px;
+    padding: 50px;
+    position: absolute;
+    top: 200px;
+    right:38%;
+
+}
+
+p{
+    /* margin: 50px; */
+    border: 1px solid white;
+    background-color: rgb(219, 215, 215);
+    /* padding: 10px; */
+    position: absolute;
+    bottom:0 ;
+    right: 0;
+}
+ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+li{
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px;
+    
+}

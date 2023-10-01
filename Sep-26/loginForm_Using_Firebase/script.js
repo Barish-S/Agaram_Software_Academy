@@ -51,7 +51,7 @@ function login() {
                 let isUserAlive = false;
                 for (i = 0; i < data.length; i++) {
                     if ((data[i].email == user_detail) && (data[i].password == password)) {
-                        alert("login successfully")
+                        alert("Logged Success,Click OK For Your Page ↴")
                         isUserAlive = true
                         localStorage.setItem("loggedin", true)
                         localStorage.setItem("logname", data[i].name)
