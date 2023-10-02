@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    background-image: url("bg.jpg");
+    background-size: 100%;
+    display: flex;
+    min-height: 85vh;
+    width: 100%;
+}
+
+#top{
+    margin-top: 50px;
+}
+
+h1 {
+
+    margin: 40px;
+}
+
+#login,
+#regis {
+    position: relative;
+    width: 400px;
+    height: auto;
+    backdrop-filter: blur(7px);
+}
+
+#butn {
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+#mar {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.reg {
+    text-align: center;
+
+}
+
+#table {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#editing {
+    display: none;
+}
