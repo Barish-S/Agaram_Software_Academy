@@ -118,7 +118,7 @@ function edit(e){
                     password:baseData[i].password
                 })
             }
-    }
+    }   
     db.ref("userDetails").set(baseData);
     loging()
 }
