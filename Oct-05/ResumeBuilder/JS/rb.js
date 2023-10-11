@@ -1,15 +1,4 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyANXrZzJAnav-e2wDTbyJ4BsC7bGu72zBY",
-    authDomain: "resumebuilder-1eb02.firebaseapp.com",
-    databaseURL:"https://resumebuilder-1eb02-default-rtdb.firebaseio.com/",
-    projectId: "resumebuilder-1eb02",
-    storageBucket: "resumebuilder-1eb02.appspot.com",
-    messagingSenderId: "286435978845",
-    appId: "1:286435978845:web:7790932c1904f58080e7b4"
-  };
 
-  firebase.initializeApp(firebaseConfig);
-  var dataBase = firebase.database()
 
 let resumeDetails = {};
 let each_tmp = {}
@@ -55,7 +44,7 @@ function addMulData(p_key, e_id) {
             let each = keyss[i]
             document.getElementById(each).value = ""
         }
-
+        each_tmp={}
     }
     dispaly()
 }
@@ -63,7 +52,7 @@ function addMulData(p_key, e_id) {
 function displayData(data, p_key) {
     var list = ""
     for (var i = 0; i < data.length; i++) {
-        var s_list = data[i]
+        var s_list = JSON.stringify(data[i])
         list += `<div id="${p_key[i]}"><span class="btn btn-primary">
     ${s_list} 
     <span type="button" onclick="del('${i}','${p_key}')">
@@ -90,4 +79,77 @@ function eduArray(elmt) {
 
 function dispaly() {
     document.getElementById("display").innerHTML = JSON.stringify(resumeDetails, undefined, 2)
+}
+
+function apiPostData(){
+    $.ajax({
+        type:"POST",
+        url:"http://agaram.academy/api/action.php",
+        data:{
+            request:"create_resume",
+            user:"barish",
+            resume:{resumeDetails}
+        },
+        success:function(details){
+            console.log(details)
+        },
+        error:function(error){
+            console.log("Error",error)
+        }
+    })
+}
+
+function apiGetData(){
+    $.ajax({
+        type:"GET",
+        url:"http://agaram.academy/api/action.php",
+        data:{
+            request:"get_user_resume",
+            user:"barish",
+        },
+        success:function(details){
+            let detai=JSON.parse(details)
+            $("#display").html(detai.data[1])
+            console.log(detai.data)
+        },
+        error:function(error){
+            console.log("Error",error)
+        }
+    })
+}
+
+function apiDelData(){
+    $.ajax({
+        type:"GET",
+        url:"http://agaram.academy/api/action.php",
+        data:{
+            request:"delete_user_resume",
+            user:"barish",
+            id:1
+        },
+        success:function(details){
+            console.log(details)
+        },
+        error:function(error){
+            console.log("Error",error)
+        }
+    })
+}
+
+function apiIdData(){
+    $.ajax({
+        type:"GET",
+        url:"http://agaram.academy/api/action.php",
+        data:{
+            request:"get_resume_by_id",
+            user:"barish",
+            id:8134
+        },
+        success:function(details){
+            console.log(details)
+        },
+        error:function(error){
+            console.log("Error",error)
+        }
+    })
 }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resume Builder</h1>
+    <div>
+        <form>
+            <div>
+                <label>Name:</label>
+                <input type="text" name="name" id="" onkeyup="run(this)">
+            </div>
+            <div>
+                <label>E-Mail:</label>
+                <input type="text" name="E-Mail" id="" onkeyup="run(this)">
+            </div>
+            <div>
+                <label>Objectives:</label>
+                <input type="text" name="objectives" id="" onkeyup="run(this)">
+            </div>
+            <h3>Persional Details</h3>
+            <div>
+                <label>Father's Name:</label>
+                <input type="text" name="father_name" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <div>
+                <label>Mother's Name:</label>
+                <input type="text" name="mother_name" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <div>
+                <label>Gender:</label>
+                <input type="text" name="gender" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <div>
+                <label>Address:</label>
+                <input type="text" name="address" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <div>
+                <label>Phone Number:</label>
+                <input type="text" name="phone_no" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <div>
+                <label>Marital Status:</label>
+                <input type="text" name="marital" id="" onkeyup="run(this,'Persional Details')">
+            </div>
+            <h3>Skill</h3>
+            <div>
+                <input type="text" name="marital" id="skill_list">
+                <button type="button" onclick="addMulData('skills','skill_list')">ADD</button>
+                <div>
+                    <p id="skills"></p>
+                </div>
+            </div>
+            <h3>Languages Known:</h3>
+            <div>
+                <input type="text" name="marital" id="lan_list">
+                <button type="button" onclick="addMulData('LanguagesKnown','lan_list')">ADD</button>
+                <div>
+                    <p id="LanguagesKnown"></p>
+                </div>
+            </div>
+            <h3>Projects:</h3>
+            <div>
+                <input type="text" name="marital" id="project_list">
+                <button type="button" onclick="addMulData('projects','project_list')">ADD</button>
+                <div>
+                    <p id="projects"></p>
+                </div>
+            </div>
+            <h3>Education Qualification:</h3>
+            <div>
+                <input type="text" name="inst_name" id="inst_name" placeholder="Institute Name" onkeyup="objetList(this)" >
+                <input type="text" name="inst_level" id="inst_level" placeholder="Level" onkeyup="objetList(this)" >
+                <input type="text" name="passed_out" id="passed_out" placeholder="Passedout Year" onkeyup="objetList(this)" >
+                <input type="text" name="percentage" id="percentage" placeholder="percentage" onkeyup="objetList(this)" >
+                <button type="button" onclick="addMulData('EducationDetails',null)">ADD</button>
+                <div>
+                    <p id="EducationDetails"></p>
+                </div>
+            </div>
+            <div>
+                <pre id="display"><code></code></pre>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="test.js"></script>
+</html>
+
+
+
+
+<p style="margin-left: 70%;margin-bottom: 0.5%;">Your's Faithfully,</p>
+<b style="margin-left: 72%;margin-top: 0%;">BARISH S</b>
