@@ -38,7 +38,7 @@ function addMulData(p_key, e_id) {
     }
     else {
         resumeDetails[p_key].push(each_tmp);
-        displayData(resumeDetails[p_key], p_key)
+        disObj(resumeDetails[p_key], p_key)
         let keyss = Object.keys(each_tmp)
         for (var i = 0; i < keyss.length; i++) {
             let each = keyss[i]
@@ -52,7 +52,7 @@ function addMulData(p_key, e_id) {
 function displayData(data, p_key) {
     var list = ""
     for (var i = 0; i < data.length; i++) {
-        var s_list = JSON.stringify(data[i])
+        var s_list =data[i]
         list += `<div id="${p_key[i]}"><span class="btn btn-primary">
     ${s_list} 
     <span type="button" onclick="del('${i}','${p_key}')">
@@ -66,12 +66,66 @@ function displayData(data, p_key) {
     document.getElementById(p_key).innerHTML = list
 }
 
-function del(indx, p_key) {
-    resumeDetails[p_key].splice(indx, 1)
-    let vanish = document.getElementById(`${p_key[indx]}`)
-    vanish.remove()
+function del(indx,key){
+    let datas=resumeDetails[key]
+    let replacing=[]
+    for (var i=0;i<datas.length;i++){
+        if(i!=indx){
+            replacing.push(datas[i])
+        }
+    }
+    resumeDetails[key]=replacing
     dispaly()
+    displayData(resumeDetails[key],key)
 }
+
+
+function disObj(data,p_key){
+    var list = ""
+    if(p_key=="education"){
+    for (var i = 0; i < data.length; i++) {
+        list += `<tr>
+        <td>${data[i].inst_name}</td>
+        <td>${data[i].inst_level}</td>
+        <td>${data[i].inst_year}</td>
+        <td>${data[i].percentage}</td>
+        <td><button class="btn btn-danger" onclick=delt('${i}','${p_key}')>Delete</button></td>
+        </tr>`
+    }}
+    else{
+        for (var i = 0; i < data.length; i++) {
+            list += `<tr>
+            <td>${data[i].company_name}</td>
+            <td>${data[i].role}</td>
+            <td>${data[i].ex_year}</td>
+            <td>${data[i].package}</td>
+            <td><button class="btn btn-danger" onclick=delt('${i}','${p_key}')>Delete</button></td>
+            </tr>`
+        }}
+    document.getElementById(p_key).innerHTML = list
+}
+
+function delt(indx,key){
+    let datas=resumeDetails[key]
+    let replacing=[]
+    for (var i=0;i<datas.length;i++){
+        if(i!=indx){
+            replacing.push(datas[i])
+        }
+    }
+    resumeDetails[key]=replacing
+    dispaly()
+    disObj(resumeDetails[key],key)
+
+}
+
+
+// function del(indx, p_key) {
+//     resumeDetails[p_key].splice(indx, 1)
+//     let vanish = document.getElementById(`${p_key[indx]}`)
+//     vanish.remove()
+//     dispaly()
+// }
 
 function eduArray(elmt) {
     each_tmp[elmt.name] = elmt.value;
@@ -258,7 +312,7 @@ function getById(userId){
                 let inst_year=edu[i].inst_year
                 let percentage=edu[i].percentage
                 edu_list+=`<li><b>${inst_level}</b></li>
-                            <label>${ins_name},${inst_year},<b>${percentage}%</b>.</label><br/>`
+                            <label>${ins_name},${inst_year},<b>${percentage}%</b>.</label>`
             }
             $("#edu_list").html(edu_list)
 
@@ -280,4 +334,16 @@ function getById(userId){
             console.log("Error",error)
         }
     })
+}
+
+function generatePDF(){
+          const page=document.getElementById("download");
+            var  opt={
+            margin:      1,
+            filename:   "Resume.pdf",
+            image:      {type:'jpeg',quality:0.98},
+            html2canvas:{scale:2},
+            jsPDF:      {unit:'in', format:'letter',orientation:'portrait'}
+          };
+          html2pdf().set(opt).from(page).save();
 }

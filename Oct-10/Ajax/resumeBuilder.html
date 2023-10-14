@@ -135,7 +135,20 @@
                     <input type="button" value="ADD" class="btn btn-success" onclick="addMulData('education',null)">
                 </div>
                 <div>
-                    <p id='education'></p>
+                    <table class="table">
+                        <thead class="table-dark table-bordered border-black">
+                            <tr>
+                                <th>Institute Name</th>
+                                <th>Institute Level</th>
+                                <th>Passedout Year</th>
+                                <th>Percentage</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id='education'>
+
+                        </tbody>
+                    </table>
                 </div>
                 <h3>Experience:</h3>
             <div class="mb-3 row">
@@ -155,7 +168,20 @@
                     <input type="button" value="ADD" class="btn btn-success" onclick="addMulData('experience',null)">
                 </div>
                 <div>
-                    <p id='experience'></p>
+                    <table class="table">
+                        <thead class="table-dark table-bordered border-black">
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Role</th>
+                                <th>Year Of Experience</th>
+                                <th>Package</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id='experience'>
+
+                        </tbody>
+                    </table>
                 </div>
                 <div class="mb-3 row">
                     <label class="col-2 col-form-label"><h4>Declaration :</h4></label>
@@ -164,9 +190,9 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="button" onclick="apiPostData()">Submit form</button>
+                    <button class="btn btn-outline-success" type="button" onclick="apiPostData()">Submit form</button>
                   </div>
-    
+                  <a href="showData.html"><button type="button" class="btn btn-outline-dark">Input Page</button></a>
                 <div class="mb-3 row alert alert-danger">
                     <pre id="display"><code></code></pre>
                 </div>

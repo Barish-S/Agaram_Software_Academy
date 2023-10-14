@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <a href="resumeBuilder.html"><button>Input Page</button></a>
-    <a href="showData.html"><button>Table Page</button></a>
+    <a href="resumeBuilder.html"><button type="button" class="btn btn-outline-secondary">Input Page</button></a>
+    <a href="showData.html"><button type="button" class="btn btn-outline-dark">Data Page</button></a>
     <div class="flex">
-        <div class="main">
+        <div class="main" id="download">
             <div class="one">
                 <img src="/home/barish/Downloads/Telegram Desktop/J11655  -  Barish.jpg" alt="Image"><br>
-                <u><b>Contact Details:</b></u><br><br>
+                <u><b>Contact Details:</b></u><br>
                 <label>E-Mail: </label><br>
-                <a href="mailto:barishs28@gmail.com" id="email">barishs28@gmail.com</a><br><br>
+                <a href="mailto:barishs28@gmail.com" id="email">barishs28@gmail.com</a><br>
                 <label for="">Mobile No:</label><br>
                 <label id="m_number">+919080094650</label><br><br>
                 <label><b><u>Father Name:</u></b></label><br>
@@ -94,10 +94,12 @@
             </div>
         </div>
     </div>
+    <button onclick="generatePDF()">Download PDF</button>
 </body>
 
 </html>
 <script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script>
     var id = getUrlParameter('id');

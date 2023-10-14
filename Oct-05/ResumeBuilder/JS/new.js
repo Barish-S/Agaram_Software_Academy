@@ -15,15 +15,3 @@ ${s_list}
     document.getElementById(p_key).innerHTML = list
 }
 
-function del(clk_name,key){
-    let datas=resumeDetails[key]
-    let replacing=[]
-    for (var i=0;i<datas.length;i++){
-        if(datas[i]!=clk_name){
-            replacing.push(datas[i])
-        }
-    }
-    resumeDetails[key]=replacing
-    dispaly()
-    displayData(resumeDetails[key],key)
-}
