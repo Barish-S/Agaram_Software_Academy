@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBuilder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body style="background-color: rgb(2,13,18); margin-top: 20px;overflow-x: hidden;">
+    <div class="container text-bg-secondary bg-dark.bg-gradient rounded-4 text-black "  id="main">
+        <h1 class="d-flex justify-content-center">Resume Builder</h1>
+        <form>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Name :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="name" onkeyup="run(this)">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">E-Mail :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="email" onkeyup="run(this)">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Applying The Role For :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="a_role" onkeyup="run(this)">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Objectives :</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="objectives" onkeyup="run(this)">
+                </div>
+            </div>
+            <hr class="border border-black border-1">
+            <h3 class="d-flex justify-content-center">Persional Details</h3>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Upload Photo:</label>
+                <div class="col-10">
+                    <input type="file" class="form-control" name="image" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Father's Name:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="father_name" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Mother's Name:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="mother_name" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">D.O.B :</label>
+                <div class="col-10">
+                    <input type="date" class="form-control" name="dob" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Gender:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="gender" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Phone Number :</label>
+                <div class="col-10">
+                    <input type="number" class="form-control" name="phone_no" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Address:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="Address" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-2 col-form-label">Marital Status:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="marital_status" onkeyup="run(this,'persional_details')">
+                </div>
+            </div>
+            <hr class="border border-black border-1">
+            <h3 style="margin-left: 50%;" >Skills:</h3>
+            <div class="mb-3 row" style="margin-left: 45%;">
+                <div class="col-4">
+                    <input type="text" class="form-control" id="skill_list"></div>
+                    <div class="col-3">
+                    <button type="button" class="btn btn-success"
+                        onclick="addMulData('skills','skill_list')">ADD</button>
+                </div>
+                <div>
+                    <p id='skills'></p>
+                </div>
+            </div>
+            <hr class="border border-black border-1">
+            <h3 style="margin-left: 49%;">Projects:</h3>
+            <div class="mb-3 row" style="margin-left: 45%;">
+                <div class="col-4">
+                    <input type="text" class="form-control" id="project_list"></div>
+                    <div class="col-3">
+                    <button type="button" class="btn btn-success"
+                        onclick="addMulData('projects','project_list')">ADD</button>
+                </div>
+                <div>
+                    <p id='projects'></p>
+                </div>
+            </div>
+            <hr class="border border-black border-1">
+
+            <h3 style="margin-left: 46%;">Languages Known:</h3>
+            <div class="mb-3 row" style="margin-left: 45%;">
+                <div class="col-4">
+                    <input type="text" class="form-control" id="lan_list"></div>
+                    <div class="col-3">
+                    <button type="button" class="btn btn-success"
+                        onclick="addMulData('LanguagesKnown','lan_list')">ADD</button>
+                    </div>
+                
+                <div>
+                    <p id='LanguagesKnown'></p>
+                </div>
+            </div>
+            <hr class="border border-black border-1">
+
+            <h3 style="margin-left: 47%;">Education Details:</h3>
+            <div class="mb-3 row">
+                <div class="mb-3 row" style="margin-left: 15%;">
+                <div class="col-2">
+                    <input type="text" id="inst_name" class="form-control" placeholder="Institute Name" name="inst_name" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="text" id="inst_level" class="form-control" placeholder="Institute Level" name="inst_level" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="number" id="inst_year" class="form-control" placeholder="Year Of Passing" name="inst_year" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="number" id="percentage" class="form-control" placeholder="Percentage" name="percentage" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-3">
+                    <input type="button" value="ADD" class="btn btn-success" onclick="addMulData('education',null)">
+                </div>
+            </div>
+                <div>
+                    <table class="table" style="margin-top: 10px;">
+                        <thead class="table-dark table-bordered border-black">
+                            <tr>
+                                <th>Institute Name</th>
+                                <th>Institute Level</th>
+                                <th>Passedout Year</th>
+                                <th>Percentage</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id='education'>
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="border border-black border-1">
+
+                <h3 style="margin-left: 49%;">Experience:</h3>
+            <div class="mb-3 row">
+                <div class="mb-3 row" style="margin-left: 15%;">
+                <div class="col-2" >
+                    <input type="text" id="company_name" class="form-control" placeholder="Company Name" name="company_name" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="text" id="role" class="form-control" placeholder="Role" name="role" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="number" id="ex_year" class="form-control" placeholder="Year Of Experience" name="ex_year" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-2">
+                    <input type="number" id="package" class="form-control" placeholder="Package" name="package" onkeyup="eduArray(this)">
+                </div>
+                <div class="col-3">
+                    <input type="button" value="ADD" class="btn btn-success" onclick="addMulData('experience',null)">
+                </div>
+            </div>  
+                <div>
+                    <table class="table" style="margin-top: 10px;">
+                        <thead class="table-dark table-bordered border-black">
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Role</th>
+                                <th>Year Of Experience</th>
+                                <th>Package</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody id='experience'>
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr class="border border-black border-1">
+
+                <div class="mb-3 row">
+                    <label class="col-2 col-form-label"><h4>Declaration :</h4></label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="declaration" onkeyup="run(this)">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button style="margin-left: 50%;" class="btn btn-outline-light" type="button" onclick="apiPostData()">Submit form</button>
+                  </div>
+                  <a href="showData.html"><button style="margin-left: 51%;margin-top: 5px;margin-bottom: 5px;" type="button" class="btn btn-outline-dark">List Page</button></a>
+                <div style="margin-left: 10px;" class="mb-3 row alert alert-danger">
+                    <pre id="display"><code></code></pre>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="rb.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    
+
+</html>

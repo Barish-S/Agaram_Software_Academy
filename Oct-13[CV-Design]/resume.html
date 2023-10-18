@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayByID</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <ul id="nav">
+        <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
+        <li><a id="dec" href="showData.html">《List Page》</a></li>
+    </ul>
+    <div class="flex">
+        <div class="main" id="download">
+            <div class="one">
+                <img src="/home/barish/Downloads/Telegram Desktop/J11655  -  Barish.jpg" alt="Image"><br>
+                <u><b>Contact Details:</b></u><br>
+                <label>E-Mail: </label><br>
+                <a href="mailto:barishs28@gmail.com" id="email">barishs28@gmail.com</a><br>
+                <label for="">Mobile No:</label><br>
+                <label id="m_number">+919080094650</label><br><br>
+                <label><b><u>Father Name:</u></b></label><br>
+                <label id="f_name">Sheik Mydeen I</label><br><br>
+                <label><b><u>Mother Name:</u></b></label><br>
+                <label id="m_name">Jennath Be   evi</label><br><br>
+                <b><u>Present Address:</u></b><br>
+                <label id="address">8/100,Mydeenpuram, Madhavalayam,Kanyakumari District,Tamilnadu-629302</label><br><br>
+                <u><b>Personal Data:</b></u><br>
+                <p><b>DOB:</b><em id="dob">28-10-2000</em></p>
+                <p><b>Sex:</b><em id="gender">Male</em></p>
+                <p><b>Nationality:</b>Indian</p>
+                <p><b>Languages Known:</b></p>
+                <p id="lan_list">Tamil,English,Malayalam</p>
+                <p><b>Marital Status:</b><em id="marital">Single</em></p>
+            </div>
+            <div class="mer">
+                <div class="two">
+                    <h3 style="font-size: 30pt;margin-bottom: 0%;margin-top: 10px;" id="name">BARISH S</h3>
+                    <p id="a_role" style="font-size: 15pt; margin-bottom: 10px;margin-top: 0%;">FullStack WebDeveloper</p>
+                    <b class="b">Objectives:</b>
+                    <hr style="margin: 1px;">
+                    <p id="objectives">Looking for a challenging career in the field of computer science which provides me
+                        a platform to present my theoretical and practical knowledge and develop my
+                        experimental and research skills and extend myself to higher work in the field of my
+                        technical interests. As a fresher computer science student looking for a platform
+                        where I can showcase my knowledge and skills</p>
+                    <b class="b" id="education">Academic Profile:</b>
+                    <hr style="margin: 1px;">
+                    <ul id="edu_list">
+                        <li><b>M.Sc Computer Science</b></li>
+                        <label>Noorul Islam College Of Arts & Science,Kumracoil,2021-2023.</label>
+                        <li><b>B.Sc Computer Science</b></li>
+                        <label>Govt Arts And Cience College Nagercoil,2018-2021.</label>
+                        <li><b>HSC</b></li>
+                        <label>Government Higher Secondery School,Madhavalayam,2018.</label>
+                        <li><b>SSLC</b></li>
+                        <label>Government Higher Secondery School,Madhavalayam,2016.</label>
+                    </ul>
+                    <b class="b">Technical Skills:</b>
+                    <hr style="margin: 1px;">
+                    <ul id="skill_list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>MS-Word And PowerPoint</li>
+                    </ul>
+                    <b class="b">Experience:</b>
+                    <hr style="margin: 1px;">
+                    <ul id="ex_list">
+                        <li>Time & Event Management.</li>
+                        <li>Hardwork With Full Of Interest.</li>
+                        <li>Urge To Complete Things Once Started.</li>
+                        <li>Team Player.</li>
+                        <li>Punctuality.</li>
+                    </ul>
+                    <b class="b" id="project">Academic Project:</b>
+                    <hr style="margin: 1px;">
+                    <ul id="pro_list">
+                        <li>
+                    <p><u><b>MAJOR Project:</b></u> I completed My post graduate main project entitled <b>Child
+                            Monitoring
+                            Mobile Application</b> With The Internship at Hi-Tech Solution,Nagercoil</p></li>
+                        </ul>
+                    <hr>
+                </div><br>
+                <b class="b" style="margin-left:100px;font-size: 18px; margin-right: 22px;">Declaration:</b>
+                <p style="margin-left: 150px;" id="declaration">I hereby declare that all the above furnished Details are true to the
+                    best of my
+                    knowledge.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    var id = getUrlParameter('id');
+    getById(id)
+    </script>
+</html>

@@ -11,6 +11,10 @@
 </head>
 
 <body>
+  <ul id="nav">
+    <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
+    <li><a id="dec" href="showData.html">《List Page》</a></li>
+</ul>
   <div class="container">
     <div class="profile">
       <div class="profile_container">
@@ -19,9 +23,9 @@
         </div>
         <div>
           <h1 class="profile_name">
-            <span class="profile_name_firstName" id="name">Shaif</span>
+            <span class="profile_name_lastName" id="name">Shaif</span>
           </h1>
-          <p class="profile_title">Software Developer</p>
+          <p class="profile_title" id="a_role">Software Developer</p>
           <p class="description profile_description" id="objectives">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -41,21 +45,9 @@
           <li>MERN STACK</li>
         </ul>
       </div>
-      <div class="ref">
-        <h3 class="title">Reference</h3>
-        <div class="ref_item">
-          <h4 class="ref_name">Rashid Chy</h4>
-          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, neque?</p>
-        </div>
-        <div class="ref_item">
-          <h4 class="ref_name">Ayman Rahman</h4>
-          <p class="description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-        </div>
-      </div>
-
       <div class="edu">
         <h3 class="title">Education</h3>
+        <ul id="edu_list">
         <div class="edu_item">
           <p class="item_preTitle">2012-2014</p>
           <h4 class="item_title">MSC in CSE</h4>
@@ -70,30 +62,20 @@
             Chittagong University
           </p>
         </div>
-      </div>
-
-      <div class="certification">
-        <h3 class="title">certification</h3>
-        <div class="certification_item">
-          <p class="item_preTitle">2018</p>
-          <h4 class="item_title">Frontend Developer</h4>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. Ut enim ad minim veniam,
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="group-2">
+    </ul><br><br><br>
       <div class="exp">
         <h3 class="title">Experience</h3>
         <ul id="ex_list">
 
         </ul>
       </div>
+      </div>
+    </div>
+    <div class="group-2">
+      
       <div class="awards">
-        <h3 class="title">Awards</h3>
+        <h3 class="title">Academic Projects</h3>
+        <ul id="pro_list">
         <div class="awards_item">
           <p class="item_preTitle">2019</p>
           <h4 class="item_title">Rashid Software LTD.</h4>
@@ -112,65 +94,66 @@
             magna aliqua. Ut enim ad minim veniam,
           </p>
         </div>
+      </ul>
       </div>
 
       <div class="interest">
-        <h3 class="title">Interest</h3>
-        <div class="interest_items">
-          <div class="interest_item">
-            <i data-feather="music"></i>
-            <span>Music</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="book"></i>
-            <span>Books</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="map"></i>
-            <span>Travel</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <hr>
+        <h3 class="title">Persional Data</h3>
+        <div class="resume_bottom">
+            <div class="resume_item resume_contact" id="p_data">
+                <div class="resume_info">
+                    <div class="resume_subtitle">Father Name:</div>
+                    <div class="resume_subinfo" id="f_name">XXXXXXXX</div>
+                </div>
+                <div class="resume_info">
+                    <div class="resume_subtitle">Mother Name:</div>
+                    <div class="resume_subinfo" id="m_name">YYYYYYYYYYY</div>
+                </div>
+                <div class="resume_item resume_address">
+                    <div class="resume_title">Address:</div>
+                    <div class="resume_info" id="address">
+                    </div>
+                </div>
+                <div class="resume_item resume_contact">
+                    <div class="resume_info">
+                        <div class="resume_subtitle">Phone Number:</div>
+                        <div class="resume_subinfo" id="m_number">+62 000 222 333</div>
+                    </div>
+                    <div class="resume_info">
+                        <div class="resume_subtitle">Email:</div>
+                        <div class="resume_subinfo" id="email">rosiejack@gmail.com</div>
+                    </div>
+                </div>
+                <div class="resume_info">
+                    <div class="resume_subtitle">D.O.B:</div>
+                    <div class="resume_subinfo" id="dob">28-10-2000</div>
+                </div>
+                <div class="resume_info">
+                    <div class="resume_subtitle">Gender:</div>
+                    <div class="resume_subinfo" id="gender">Male</div>
+                </div>
+                <div class="resume_info">
+                    <div class="resume_subtitle">Languages Known:</div>
+                    <div class="resume_subinfo" id="lan_list">English</div>
+                </div>
+                <div class="resume_info">
+                    <div class="resume_subtitle">Marital Status:</div>
+                    <div class="resume_subinfo" id="marital">Single</div>
+                </div>
+            </div><br><br>
     <div class="group-3">
       <div class="contact">
-        <h3 class="title">Contact</h3>
-        <div class="contact_info">
-          <p class="description">
-            Chittagong, Bangladesh
-          </p>
-          <p class="description">
-            +880 ** *** ***
-          </p>
-          <p class="description">
-            shaifarfan08@gmail.com
-          </p>
-        </div>
-      </div>
-      <div class="social">
-        <h3 class="title">Socials</h3>
-        <div class="social_items">
-          <a href="#" target="_b" class="social_item">
-            <i data-feather="github"></i>
-            <span>/shaifarfan</span>
-          </a>
-          <a href="#" target="_blank" class="social_item">
-            <i data-feather="twitter"></i>
-            <span>/shaifarfan08</span>
-          </a>
-          <a href="#" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
-            <span>/shaifarfan08</span>
-          </a>
-        </div>
+        <h3 class="title">Declaration:</h3>
+        <p id="declaration"></p>
       </div>
     </div>
   </div>
-  <script>
-    feather.replace()
-  </script>
 </body>
-
+<script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    var id = getUrlParameter('id');
+    getById(id)
+    </script>
 </html>

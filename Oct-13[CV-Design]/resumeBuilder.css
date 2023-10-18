@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+
+.one{
+    width: 65%;
+    display: inline-block;
+}
+
+.two{
+    width: 30%;
+    display: inline-block;
+}

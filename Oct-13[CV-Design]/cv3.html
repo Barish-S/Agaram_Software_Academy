@@ -20,31 +20,39 @@
     <title>Resume</title>
   </head>
   <body>
+    <ul id="nav">
+      <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
+      <li><a id="dec" href="showData.html">《List Page》</a></li>
+  </ul>
     <div class="box">
       <div class="header">
         <div class="header-left">
           <div class="name">
-            <h1 class="first-name">KAMAL</h1>
-            <h1 class="last-name">TEJA</h1>
+            <h1 class="first-name" id="name">KAMAL</h1>
+            <h4 id="a_role">TEJA</h4>
           </div>
         </div>
         <div class="header-right">
           <div class="email">
-            <p>packetcode@gmail.com</p>
+            <p id="email">packetcode@gmail.com</p>
             <i class="fas fa-envelope"></i>
           </div>
-          <div class="linkedin">
-            <p>linkedin.com/in/kamal-teja-157111168/</p>
+          <div class="mobileNymber">
+            <p id="m_number">linkedin.com/in/kamal-teja-157111168/</p>
             <i class="fab fa-linkedin"></i>
           </div>
-          <div class="github">
-            <p>github.com/packetcode</p>
+          <div class="address">
+            <p id="address">github.com/packetcode</p>
             <i class="fab fa-github"></i>
           </div>
-          <div class="phone">
-            <p>+91-00-000-00000</p>
-            <i class="fas fa-phone"></i>
-          </div>
+          <div class="Languages">
+              <b id="address">Languages Known:</b>
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="Languages_list">
+              <p id="lan_list">github.com/packetcode</p>
+              <i class="fab fa-github"></i>
+            </div>
         </div>
       </div>
       <hr />
@@ -53,7 +61,7 @@
           <i class="fas fa-bullseye icon"></i>
           <h2>Objectve</h2>
         </div>
-        <p>
+        <p id="objectives">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta rem,
           sit ex accusamus quisquam incidunt tempora, alias recusandae error
           perspiciatis a nihil quibusdam ea, tenetur harum. Earum doloribus
@@ -65,7 +73,7 @@
           <i class="fas fa-school icon"></i>
           <h2>Education</h2>
         </div>
-
+        <ul id="edu_list">
         <table>
           <tr>
             <th>Board</th>
@@ -92,6 +100,7 @@
             <td>95%</td>
           </tr>
         </table>
+      </ul>
       </div>
       <div class="skills">
           <div class="skills-heading grey">
@@ -99,7 +108,7 @@
                 <h2>Skills</h2>
           </div>
 
-        <ul>
+        <ul id="skill_list">
           <li>HTML</li>
           <li>CSS</li>
           <li>Javascript</li>
@@ -111,9 +120,9 @@
       <div class="activities">
         <div class="act-heading grey">
           <i class="fab fa-creative-commons-nd icon"></i>
-          <h2>Activities</h2>
+          <h2>Experience</h2>
         </div>
-
+        <ul id="ex_list">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi
           reprehenderit libero eum maiores quidem assumenda laboriosam fugit!
@@ -122,7 +131,29 @@
           officia eum obcaecati in atque unde suscipit consequuntur nihil, sed
           aliquid! Sed et nam aut dolorem fugit.
         </p>
+      </ul>
       </div>
+      <div class="skills">
+        <div class="skills-heading grey">
+              <i class="fas fa-tools icon"></i>
+              <h2>Academic Projects</h2>
+        </div>
+        <ul id="pro_list">
+        </ul>
+        
+        <div class="skills">
+        <div class="skills-heading grey">
+              <i class="fas fa-tools icon"></i>
+              <h2>Declaration</h2>
+        </div>
+        <div id="declaration"></div>
     </div>
   </body>
+  <script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    var id = getUrlParameter('id');
+    getById(id)
+    </script>
 </html>

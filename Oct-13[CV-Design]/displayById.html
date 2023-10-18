@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayByID</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="cv5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+
+<body>
+    <ul id="nav">
+        <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
+        <li><a id="dec" href="showData.html">《List Page》</a></li>
+    </ul>
+    <div class="container">
+        <div class="avatar">
+         <img src="https://i.pinimg.com/564x/eb/57/6f/eb576ff023487bcb1fa3ad61ee7b23ee.jpg" alt="">
+        </div>
+        <div class="name">
+             <h1 id="name">HO HOANG</h1>
+             <div class="specialize" style="margin-top: 20px;" id="a_role">Frond-End Developer</div><br>
+             <ul style="list-style: none;">
+                 <li><b>CONTACT INFO</b>
+                 </li>
+                 <li id="email">
+                 </li>   
+                 <li id="m_number">
+                </li>  
+             </ul>
+        </div>
+        <div class="info">
+            <ul>
+                <li><b>Persional Info</b></li>
+                <li><b>Father Name : </b> <label id="f_name"></label></li>
+                <li><b>Mother Name : </b> <label id="m_name"></label></li>
+                <li><b>D.O.B : </b> <label id="dob"></label></li>
+                <li><b>Marital Status : </b> <label id="marital"></label></li>
+
+            </ul>
+        </div>
+        <div class="intro">
+         <h2 style="margin-bottom: 0%;">OBJECTIVES</h2>
+         <p id="objectives">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi omnis quasi dolores modi eius aliquam ipsum soluta, dolore tenetur excepturi praesentium porro alias itaque enim labore qui necessitatibus molestias hic cum deserunt ab! Illum sed eveniet distinctio, alias sunt repudiandae labore a dolorum tenetur? Harum deleniti mollitia odio neque.</p>
+        </div>
+        <div class="experience">
+         <h2 style="margin-bottom: 0%;">EXPERIENCE</h2>
+         <ul id="ex_list">
+         <!-- <div class="item">
+             <h4>Frond-end Developer</h4>
+             <div class="time">
+                <span>2020 - 2022</span>
+                <span>ABC D company</span>
+             </div>
+             <div class="des">
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium officia nobis quas excepturi consectetur quidem quia est neque doloremque.
+             </div>
+         </div>
+ 
+             <div class="item">
+                 <h4>Student</h4>
+                 <div class="time">
+                    <span>2015 - 2019</span>
+                    <span>ACDC University</span>
+                 </div>
+                 <div class="des">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium officia nobis quas excepturi consectetur quidem quia est neque doloremque.
+                 </div>
+             </div> -->
+         </ul>   
+             <h2 style="margin-bottom: 0%;" class="skills">
+                 SKILLS
+             </h2>
+             <ul id="skill_list">
+                 <li>HTML</li>
+                 <li>CSS</li>
+                 <li>Bootstrap</li>
+                 <li>Javascript</li>
+                 <li>PHP</li>
+                 <li>MySql</li>
+                 <li>Git</li>
+                 <li>Laravel</li>
+             </ul>
+ 
+        </div>
+        <div class="project">
+         <h2 style="margin-bottom: 0%;">EDUCATION</h2>
+         <div class="item">
+                 <ul id="edu_list">
+                     <li>Lorem ipsum dolordolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, dolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur dolores.</li>
+                 </ul>
+         </div><br>
+ 
+         <div class="item">
+             <h2 style="margin-bottom: 0%;">PROJECTS</h2>
+                 <ul id="pro_list" style="margin-top: 0%;">
+                     <li>Lorem ipsum dolordolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, dolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur dolores.</li>
+                 </ul>
+         </div><br>
+ 
+         <div class="item">
+             <h2 style="margin-bottom: 0%;">LANGUAGES KNOWN</h2>
+                 <ul id="lan_list" style="margin-top: 0%;">
+                     <li>Lorem ipsum dolordolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, dolores.</li>
+                     <li>Lorem ipsum dolor sit amet consectetur dolores.</li>
+                 </ul>
+         </div><br>
+         <div class="item">
+             <h2 style="margin-bottom: 0%;">DECLARATION</h2>
+                 <p id="declaration"></p>
+         </div>
+        </div>
+     </div>
+</body>
+<script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    var id = getUrlParameter('id');
+    getById(id)
+    </script>
+</html>
