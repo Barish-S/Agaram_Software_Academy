@@ -167,15 +167,76 @@ function apiGetData(){
             var details=JSON.parse(datas)
             let list=details.data
             let list_id=""
+            // let list_cv1=""
+            // let list_cv2=""
+            // let list_cv3=""
+            // let list_cv4=""
+            // let list_cv5=""
+            // let p_cv1=""
+            // let p_cv2=""
+            // let p_cv3=""
+            // let p_cv4=""
+            // let p_cv5=""
+            // let scv1=""
+            // let scv2=""
+            // let scv3=""
+            // let scv4=""
+            // let scv5=""
+            // let scv6=""
+
             for(var i=0;i<list.length;i++){
                 list_id+=`<tr>
                 <td>${list[i].id}</td>
                 <td>${list[i].user}</td>
-                <td><button class="btn btn-danger" onclick="apiDelData(${list[i].id})">delete</button><a href="displayById.html?id=${list[i].id}">Show Details</a></td>
+                <td><button class="btn btn-danger" onclick="apiDelData(${list[i].id})">delete</button></td>
+                <td><a href="cvlist.html?id=${list[i].id}">Click For Templates</a></td>
               </tr>
-          `
+              `
+            //   list_cv1=`<a id="dec-bot" href="cv1.html?id=${list[i].id}">《Next Template》</a>`
+            //   list_cv2=`<a id="dec-bot" href="cv2.html?id=${list[i].id}">《Next Template》</a>`
+            //   list_cv3=`<a id="dec-bot" href="cv3.html?id=${list[i].id}">《Next Template》</a>`
+            //   list_cv4=`<a id="dec-bot" href="cv4.html?id=${list[i].id}">《Next Template》</a>`
+            //   list_cv5=`<a id="dec-bot" href="resume.html?id=${list[i].id}">《Next Template》</a>`
+            //   p_cv1=`<a id="dec-bot" href="displayById.html?id=${list[i].id}">《Previous Template》</a>`
+            //   p_cv2=`<a id="dec-bot" href="cv1.html?id=${list[i].id}">《Previous Template》</a>`
+            //   p_cv3=`<a id="dec-bot" href="cv2.html?id=${list[i].id}">《Previous Template》</a>`
+            //   p_cv4=`<a id="dec-bot" href="cv3.html?id=${list[i].id}">《Previous Template》</a>`
+            //   p_cv5=`<a id="dec-bot" href="cv4.html?id=${list[i].id}">《Previous Template》</a>`
+            //   scv1=`<a href="displayById.html?id=${list[i].id}"><img src="List/scv1.png" alt=""></a>`
+            //   scv2=`<a href="resume.html?id=${list[i].id}"><img src="List/scv2.png" alt=""></a>`
+            //   scv3=`<a href="cv2.html?id=${list[i].id}"><img src="List/scv6.png" alt=""></a>`
+            //   scv4=`<a href="cv1.html?id=${list[i].id}"><img src="List/scv4.png" alt=""></a>`
+            //   scv5=`<a href="cv4.html?id=${list[i].id}"><img src="List/scv3.png" alt=""></a>`
+            //   scv6=`<a href="cv3.html?id=${list[i].id}"><img src="List/scv5.png" alt=""></a>`
+
+
             }
             $("#s_body").html(list_id)
+            // $(".cv1").html(list_cv1)
+            // $(".cv2").html(list_cv2)
+            // $(".cv3").html(list_cv3)
+            // $(".cv4").html(list_cv4)
+            // $(".cv5").html(list_cv5)
+                // $(".cv1").html(list_cv1)
+                // $(".p_cv1").html(p_cv1)
+                // $(".p_cv2").html(p_cv2)
+                // $(".p_cv3").html(p_cv3)
+                // $(".p_cv4").html(p_cv4)
+                // $(".p_cv5").html(p_cv5)
+
+                //selection
+                // $("#scv1").html(scv1)
+                // $("#scv2").html(scv2)
+                // $("#scv3").html(scv3)
+                // $("#scv4").html(scv4)
+                // $("#scv5").html(scv5)
+                // $("#scv6").html(scv6)
+
+
+
+
+
+
             
             // window.location="showData.html" 
             // let detai=JSON.parse(details)
@@ -348,4 +409,37 @@ function generatePDF(){
             jsPDF:      {unit:'in', format:'letter',orientation:'portrait'}
           };
           html2pdf().set(opt).from(page).save();
+}
+
+
+function cvShow(id){
+    $.ajax({
+        type:"GET",
+        url:"http://agaram.academy/api/action.php",
+        data:{
+            request:"get_user_resume",
+            user:"barish",
+        },
+        success:function(datas){
+            let dat=JSON.parse(datas)
+            let data=dat.data
+            let cvlist=""
+            for(var i=0;i<data.length;i++){
+                if(data[i].id==id){
+                   cvlist+=`<li><a href="displayById.html?id=${data[i].id}"><img src="List/scv1.png" alt=""></a></li>
+                   <li><a href="resume.html?id=${data[i].id}"><img src="List/scv2.png" alt=""></a></li>
+                   <li><a href="cv2.html?id=${data[i].id}"><img src="List/scv6.png" alt=""></a></li>
+                   <li><a href="cv1.html?id=${data[i].id}"><img src="List/scv4.png" alt=""></a></li>
+                   <li><a href="cv4.html?id=${data[i].id}"><img src="List/scv3.png" alt=""></a></li>
+                   
+                   <li><a href="cv3.html?id=${data[i].id}"><img src="List/scv5.png" alt=""></a></li>
+                   <li><a href="CV7/index.html?id=${data[i].id}"><img src="List/scv8.png" alt=""></a></li>
+                   <li><a href="CV6/index.html?id=${data[i].id}"><img src="List/scv7.png" alt=""></a></li>`
+                }
+            }
+            $("#ul").html(cvlist)
+        },
+        error:function(datas){
+
+        }})
 }

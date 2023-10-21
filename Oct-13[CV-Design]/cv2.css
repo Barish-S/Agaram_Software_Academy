@@ -14,6 +14,7 @@ html {
 }
 body {
 	font-family: Inter, sans-serif;
+	background-color: #D5D5D5;
 	color: white;
 	position: relative;
 }
@@ -57,10 +58,12 @@ a {
 
 /* layouts */
 .container {
-	max-width: 1000px;
+	max-width: 800px;
+	box-shadow: 0 10px 50px #858585;
 	width: 90%;
 	margin: 20px auto;
 	display: grid;
+	line-height: 30px;
 	padding: 5rem;
 	background: #070707;
 	grid-template-columns: 1fr 1fr;
@@ -248,17 +251,44 @@ hr {
 	top: 0%;
 	position: sticky;
 	text-decoration: none;
-	gap: 25%;
+	gap: 20px;
+	justify-content: start;
 	align-items: center;
-	background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% );
-	justify-content: center;
+	box-shadow: 0 5px 50px #070606;	background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );          
 	width: 100%;
 	height: 40px;
 	list-style-type: none;
 
   }
+  #nav li{
+	margin-left: 45px;
+	font-size: 14pt;
+}
+
   #dec{
 	text-decoration: none ;
-	color: white;
+	color: black;
 	font-size: 14pt;
+  }
+
+  #dec:hover{
+	text-shadow: 0 2px 10px black  ;
+	font-size: 14.5pt;
+}
+  #nav-bot{
+	display: flex;
+	text-decoration: none;
+	gap: 25%;
+	position: static;
+	align-items: center;
+	justify-content: center;
+	bottom: 0%;
+	width: 100%;
+	height: 40px;
+	list-style-type: none;
+
+  }
+  #dec-bot{
+	text-decoration: none ;
+	color: black;
   }

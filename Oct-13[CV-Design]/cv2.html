@@ -6,26 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
-  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="cv2.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
 <body>
   <ul id="nav">
-    <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
-    <li><a id="dec" href="showData.html">《List Page》</a></li>
+    <li><a id="dec" href="resumeBuilder.html">Home  <i class="fa fa-home" aria-hidden="true"></i></a></li>
+    <li><a id="dec" href="showData.html">DataList  <i class="fa fa-bars"></i></a></li>
 </ul>
   <div class="container">
     <div class="profile">
       <div class="profile_container">
         <div class="profile_profileImg">
-          <img src="./images/profileImage.png" alt="shaif arfan">
+          <img src="dp.jpg" style="width: 170px;border-radius: 30px;" alt="shaif arfan">
         </div>
         <div>
           <h1 class="profile_name">
-            <span class="profile_name_lastName" id="name">Shaif</span>
+            <span style="font-size: 24pt;" class="profile_name_lastName" id="name">Shaif</span>
           </h1>
-          <p class="profile_title" id="a_role">Software Developer</p>
+          <p style="margin-bottom: 30px;" class="profile_title" id="a_role">Software Developer</p>
+          <h5 class="title"> Objectives</h5>
           <p class="description profile_description" id="objectives">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -102,52 +103,53 @@
         <div class="resume_bottom">
             <div class="resume_item resume_contact" id="p_data">
                 <div class="resume_info">
-                    <div class="resume_subtitle">Father Name:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">Father Name:</div>
                     <div class="resume_subinfo" id="f_name">XXXXXXXX</div>
                 </div>
                 <div class="resume_info">
-                    <div class="resume_subtitle">Mother Name:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">Mother Name:</div>
                     <div class="resume_subinfo" id="m_name">YYYYYYYYYYY</div>
                 </div>
                 <div class="resume_item resume_address">
-                    <div class="resume_title">Address:</div>
+                    <div style="text-decoration: underline;" class="resume_title">Address:</div>
                     <div class="resume_info" id="address">
                     </div>
                 </div>
                 <div class="resume_item resume_contact">
                     <div class="resume_info">
-                        <div class="resume_subtitle">Phone Number:</div>
+                        <div style="text-decoration: underline;" class="resume_subtitle">Phone Number:</div>
                         <div class="resume_subinfo" id="m_number">+62 000 222 333</div>
                     </div>
                     <div class="resume_info">
-                        <div class="resume_subtitle">Email:</div>
+                        <div style="text-decoration: underline;" class="resume_subtitle">Email:</div>
                         <div class="resume_subinfo" id="email">rosiejack@gmail.com</div>
                     </div>
                 </div>
                 <div class="resume_info">
-                    <div class="resume_subtitle">D.O.B:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">D.O.B:</div>
                     <div class="resume_subinfo" id="dob">28-10-2000</div>
                 </div>
                 <div class="resume_info">
-                    <div class="resume_subtitle">Gender:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">Gender:</div>
                     <div class="resume_subinfo" id="gender">Male</div>
                 </div>
                 <div class="resume_info">
-                    <div class="resume_subtitle">Languages Known:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">Languages Known:</div>
                     <div class="resume_subinfo" id="lan_list">English</div>
                 </div>
                 <div class="resume_info">
-                    <div class="resume_subtitle">Marital Status:</div>
+                    <div style="text-decoration: underline;" class="resume_subtitle">Marital Status:</div>
                     <div class="resume_subinfo" id="marital">Single</div>
                 </div>
-            </div><br><br>
+            </div></div></div></div>
     <div class="group-3">
       <div class="contact">
         <h3 class="title">Declaration:</h3>
         <p id="declaration"></p>
       </div>
-    </div>
+    
   </div>
+      </div>
 </body>
 <script src="rb.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -156,4 +158,9 @@
     var id = getUrlParameter('id');
     getById(id)
     </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          apiGetData()
+      })
+  </script>
 </html>

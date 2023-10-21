@@ -16,13 +16,13 @@
       href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <title>Resume</title>
   </head>
   <body>
     <ul id="nav">
-      <li><a id="dec" href="resumeBuilder.html">《Form Page》</a></li>
-      <li><a id="dec" href="showData.html">《List Page》</a></li>
+      <li><a id="dec" href="resumeBuilder.html">Home  <i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li><a id="dec" href="showData.html">DataList  <i class="fa fa-bars"></i></a></li>
   </ul>
     <div class="box">
       <div class="header">
@@ -148,6 +148,7 @@
         </div>
         <div id="declaration"></div>
     </div>
+      </div></div>
   </body>
   <script src="rb.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
@@ -156,4 +157,9 @@
     var id = getUrlParameter('id');
     getById(id)
     </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          apiGetData()
+      })
+  </script>
 </html>

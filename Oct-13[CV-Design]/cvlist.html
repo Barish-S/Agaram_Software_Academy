@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0;
+        }
+        body{
+            background-image: linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+        }
+        #ul{
+            width: 70%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 40px;
+            margin: 40px 0;
+            margin-left: 300px;
+            
+        }
+        img{
+            width: 350px;
+            height: 450px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 50px #070606;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        img:hover{
+            width: 352px;
+            box-shadow: 0 5px 50px #fdfdfd;
+            transition: 0.1s;
+        }
+
+        #nav{
+            display: flex;
+            list-style: none;
+            position: sticky;
+            justify-content: start;
+            align-items: center;
+            box-shadow: 0 5px 50px #070606;
+            top: 0%;
+            width: 100%;
+            gap: 40px;
+            height: 40px;
+            background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );          
+        }
+        #nav li{
+            margin-left: 40px;
+            font-size: 14pt;
+        }
+        #dec{
+            text-decoration: none;
+            color: black;
+        }
+        #dec:hover{
+            text-shadow: 0 2px 10px black  ;
+            font-size: 14.5pt;
+        }
+        h1{
+            color: white;
+            font-family: monospace;
+            margin-left: 35%;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li><a id="dec" href="resumeBuilder.html">Home  <i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a id="dec" href="showData.html">DataList  <i class="fa-solid fa-list fa-fade" style="color: #000000;"></i></a></li>
+    </ul>
+    <h1>Choose The Template You Want!!!</h1>
+    <ul id="ul">
+    </ul>   
+</body>
+<script src="rb.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    var id = getUrlParameter('id');
+    cvShow(id)
+</script>
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+        apiGetData()
+        cvShow(id)
+    })
+</script> -->
+</html>
