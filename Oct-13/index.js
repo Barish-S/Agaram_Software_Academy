@@ -120,13 +120,6 @@ function delt(indx,key){
 }
 
 
-// function del(indx, p_key) {
-//     resumeDetails[p_key].splice(indx, 1)
-//     let vanish = document.getElementById(`${p_key[indx]}`)
-//     vanish.remove()
-//     dispaly()
-// }
-
 function eduArray(elmt) {
     each_tmp[elmt.name] = elmt.value;
 }
@@ -367,10 +360,8 @@ function cvShow(id){
                    <li><a href="cv2.html?id=${data[i].id}"><img src="List/scv6.png" alt=""></a></li>
                    <li><a href="cv1.html?id=${data[i].id}"><img src="List/scv4.png" alt=""></a></li>
                    <li><a href="cv4.html?id=${data[i].id}"><img src="List/scv3.png" alt=""></a></li>
-                   
                    <li><a href="cv3.html?id=${data[i].id}"><img src="List/scv5.png" alt=""></a></li>
-                   <li><a href="cv6.html?id=${data[i].id}"><img src="List/scv8.png" alt=""></a></li>
-                   <li><a href="cv7.html?id=${data[i].id}"><img src="List/scv7.png" alt=""></a></li>`
+                   <li><a href="cv6.html?id=${data[i].id}"><img src="List/scv8.png" alt=""></a></li>`
                 }
             }
             $("#ul").html(cvlist)
